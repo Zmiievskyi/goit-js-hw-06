@@ -3,10 +3,11 @@ const refs = {
   spn: document.querySelector("#name-output"),
 };
 
-refs.inp.addEventListener("input", onInput);
+refs.inp.addEventListener("keyup", onInput);
 const bodyEl = document.querySelector('body');
 bodyEl.addEventListener("click", () => (refs.spn.textContent = "Anonymous"));
 
 function onInput(event) {
-refs.spn.textContent = event.currentTarget.value.trim();
+  if (event.code === 'Enter') {
+refs.spn.textContent = event.currentTarget.value.trim();}
 }

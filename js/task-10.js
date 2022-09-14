@@ -26,10 +26,6 @@ function createBoxes() {
 }
 
 function destroyBoxes() {
-  const el = Object.keys(refs.container.childNodes).length;
-  for (let i = 0; i < el; i += 1) {
-    let newEl = refs.container.childNodes[0];
-    newEl.remove()
-  }
-  refs.input.value = 0
+  refs.input.value = ''
+  refs.container.innerHTML = "";
 }
