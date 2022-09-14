@@ -4,7 +4,9 @@ const refs = {
 };
 
 refs.inp.addEventListener("input", onInput);
+const bodyEl = document.querySelector('body');
+bodyEl.addEventListener("click", () => (refs.spn.textContent = "Anonymous"));
 
 function onInput(event) {
-  refs.spn.textContent = event.currentTarget.value.trim();
+refs.spn.textContent = event.currentTarget.value.trim();
 }

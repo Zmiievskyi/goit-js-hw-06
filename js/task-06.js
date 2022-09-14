@@ -1,7 +1,8 @@
 const inpRef = document.querySelector("#validation-input");
-
-inpRef.addEventListener("blur", (event) =>
-  event.currentTarget.value.length < 6
-    ? inpRef.classList.add("invalid")
-    : inpRef.classList.add("valid")
-);
+console.dir(inpRef);
+inpRef.addEventListener("blur", (event) => {
+  inpRef.classList.add("invalid")
+  if (event.currentTarget.value.length === inpRef.nextSibling.length) {
+     inpRef.classList.toggle("invalid")
+     inpRef.classList.add("valid")}
+  });

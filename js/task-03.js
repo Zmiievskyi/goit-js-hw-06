@@ -13,10 +13,13 @@ const images = [
   },
 ];
 
-const createList = images.map((img) => {
+const createList = images.map(img => {
   const itemRef = document.createElement("li");
-  itemRef.classList.add('gallery__item')
-  itemRef.insertAdjacentHTML('beforeend', `<img src = ${img.url} alt = ${img.alt} class = 'gallery__img'>`);
+  itemRef.classList.add("gallery__item");
+  itemRef.insertAdjacentHTML(
+    "beforeend",
+    `<img src = ${img.url} alt = ${img.alt} class = 'gallery__img'>`
+  );
   return itemRef;
 });
 
