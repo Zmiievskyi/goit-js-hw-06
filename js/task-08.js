@@ -9,8 +9,10 @@ function onFormSubmit(event) {
     alert("все поля должны быть заполнены");
   } else {
     obj.email = formElements.email.value;
+    obj.password = formElements.password.value;
   }
   console.log(obj);
   myForm.reset();
   return obj
 }
+// anton@gmail.com
